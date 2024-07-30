@@ -1,0 +1,13 @@
+{
+  "name": "roundtable-refactor",
+  "version": "1.0.0",
+  "description": "Chingu Roundtable - All About Refactoring examples",
+  "author": "Jim D. Medlock",
+  "license": "ISC",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "readability": "node ./src/readability.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
