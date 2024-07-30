@@ -18,12 +18,13 @@ for (let i = 0; i < customers.length; i++) {
   }
   console.log(`customers[i].current_year_sales: ${ customers[i].current_year_sales } type: `, typeof customers[i].current_year_sales)
   */
-  if (customers[i].current_year_sales < 10000.00) {
+  if (customers[i].current_year_sales < 10000.00 && customers[i].country === 'ID') {
     // When a customer with less than $100K in current year sales is located
     // push summary information onto the results array so it can be reported
     // on later in this app.
     filteredCustomers.push({
       name: customers[i].name,
+      country: customers[i].country,
       current_year_sales: customers[i].current_year_sales,
     })
   }
@@ -38,8 +39,12 @@ console.log(`readability.js - Customers with <$100K in current year sales:`)
 for (let i=0; i<filteredCustomers.length; i++) {
   // For each entry in the results array list the customer name and the amount
   // they have purchased from us in the current year.
-  console.log(`...name: ${ filteredCustomers[i].name } current year sales: ${ filteredCustomers[i].current_year_sales }`)
+  console.log(`...name: ${ filteredCustomers[i].name } country: ${ filteredCustomers[i].country } current year sales: ${ filteredCustomers[i].current_year_sales }`)
 } // End of for-loop
 
 // -----
-// Refactor this code below to make it more readable
+// Refactor this code below to make it more readable by:
+// 1. Remove unneeded `console.log` statements
+// 2. Rename variables & constants to be more descriptive
+// 3. Use `for-of` instead of simple `for` loops
+// 4. Create condition variable with descriptive name for use in `if` statements
