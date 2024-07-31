@@ -9,6 +9,7 @@
   "scripts": {
     "enhancement": "node ./src/enhancement.js",
     "readability": "node ./src/readability.js",
+    "techdebt": "node ./src/techdebt.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
