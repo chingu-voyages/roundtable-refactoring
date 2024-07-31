@@ -31,3 +31,21 @@ console.timeEnd(`Array merge using reduce()...`)
 //    const map = new Map([...customers, ...newcustomers]
 //      .map(obj => [obj.id, obj]))
 //    console.timeEnd(`Array merge using map()...`)
+// Sort both lists on the customer id so we can identify insertion points
+/*
+console.time(`Array merge using reduce()...`)
+const sortingFunction = (a, b) => a.id - b.id
+const currentCustomers = customers.sort(sortingFunction)
+const newCustomers = newcustomers.sort(sortingFunction)
+console.log('currentCustomers (sorted by id): ', currentCustomers)
+console.log('newCustomers (sorted by id):', newCustomers)
+
+const combinedCustomers = newCustomers.reduce((accumulator, item2) => {
+  if (!accumulator.some(item1 =>
+      item1.id === item2.id)) {
+      accumulator.push(item2)
+  }
+  return accumulator
+}, currentCustomers)
+console.timeEnd(`Array merge using reduce()...`)
+*/

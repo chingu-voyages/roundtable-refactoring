@@ -24,3 +24,19 @@ console.log('updatedCustomers: ', updatedCustomers)
 // 1. Create an intermediate variable when calling `assignNewCustomerId` to validate 
 //    result before pushing to `updatedCustomers`
 // 2. Add parameter validation to the `assignNewCustomerId` function
+/*
+const assignNewCustomerId = (currentCustomerId, newCustomerId) => {
+  for (let customerToUpdate of customers) {
+    if (customerToUpdate.id === currentCustomerId) {
+      customerToUpdate.id = newCustomerId
+      return customerToUpdate
+    }
+  }
+  return -1
+}
+
+let updatedCustomers = []
+updatedCustomers.push(assignNewCustomerId( 999, 9998))
+updatedCustomers.push(assignNewCustomerId(1000, "ABCD"))
+console.log('updatedCustomers: ', updatedCustomers)
+*/
